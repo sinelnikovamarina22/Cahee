@@ -1,0 +1,34 @@
+.footer {
+	background-color: $footer-bg-color;
+	padding: 32px 0;
+	min-height: 90px;
+	&__container {
+		@include flex(center, center, column);
+		@include media($screen-tablet-medium) {
+			@include flex(space-between, center);
+		}
+	}
+	&__copyright {
+		@include text($H100, 300, $grey-light);
+		margin-bottom: 15px;
+		@include media($screen-tablet-medium) {
+			margin-bottom: 0;
+		}
+	}
+	&__logo {
+		@include text($H500, 400, $grey-light);
+		margin-bottom: 18px;
+		position: relative;
+		bottom: -2px;
+		@include media($screen-tablet-medium) {
+			margin-bottom: 0;
+		}
+	}
+	&__author {
+		@include text($H50, 300, $grey-light);
+		&--marked {
+			color: $text-marked-color;
+			font-weight: 700;
+		}
+	}
+}

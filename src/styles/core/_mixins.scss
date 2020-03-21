@@ -55,3 +55,8 @@
   height: $size;
   fill: $fill;
 }
+@mixin media($screen: $screen-desktop) {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}

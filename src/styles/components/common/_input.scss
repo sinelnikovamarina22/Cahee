@@ -1,0 +1,30 @@
+.input {
+    min-height: 50px;
+    padding: 0 15px;
+    background-color: $input-bg;
+    border: none;
+    outline: none;
+    border-left: 5px solid transparent;
+    @include text($H50, 700, $white);
+    opacity: 0.5;
+    transition: all ease 0.2s;
+    &::placeholder {
+      @include text($H50, 700, $white);
+    }
+    &:focus {
+        opacity: 1;
+        border-color: $input-active-border;
+      }
+      &:invalid:not(:placeholder-shown) {
+        border-color: $input-error-border;
+      }
+      &:valid:not(:placeholder-shown) {
+        border-color: $input-valid-border;
+      }
+      &--textarea {
+        resize: none;
+        width: 100%;
+        min-height: 250px;
+        padding-top: 20px;
+      }
+}

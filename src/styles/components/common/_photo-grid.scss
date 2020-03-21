@@ -1,0 +1,99 @@
+.photo-grid{
+    overflow-x: scroll;
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 32px;
+  touch-action: pan-x;
+  @include media($screen-tablet) {
+    display: block;
+    overflow-x: auto;
+    touch-action: manipulation;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+    &__row {
+        @include flex(flex-start, stretch, row);
+        @media screen and (min-width: $screen-tablet) {
+            &:not(:last-child) {
+              margin-bottom: 28px;
+            }
+            &--medium {
+                flex: 1 1 50%;
+              }
+              &--large {
+                flex: 1 1 calc(100%/3*2);
+              }
+              &--small {
+                flex: 1 1 calc(100%/3);
+              }
+    }
+}
+&__col {
+    @include flex;
+    @media screen and (min-width: $screen-tablet) {
+      flex-direction: column;
+      width: auto;
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+      &--medium {
+        flex: 1 1 50%;
+      }
+      &--large {
+        flex: 1 1 calc(100%/3*2);
+      }
+      &--small {
+        flex: 1 1 calc(100%/3);
+      }
+    }
+  }
+&__image-wrapper {
+    position: relative;
+    // background-color: $grey;
+    width: 242px;
+    height: 170px;
+    box-shadow: 0 2px 5px 0 (black, 0.5);
+    transition: all 0.2s ease;
+    margin-right: 12px;
+    @include media($screen-iphone) {
+        width: 272px;
+        height: 192px;
+        margin-right: 16px;
+      }
+      @include media($screen-iphone-plus) {
+        width: 312px;
+        height: 222px;
+        margin-right: 20px;
+      }
+      @include media ($screen-tablet) {
+        margin-right: 0;
+        width: auto;
+        height: auto;
+        
+      @include padding-hack(71%, cover);
+      margin-bottom: 0;
+      &--large {
+        padding-bottom: 46.5%;
+      }
+      &--small {
+        height: auto;
+        padding-bottom: 0;
+      }
+      &--medium {
+        padding-bottom: 34.3%;
+      }
+}
+
+@include media {
+    &:hover {
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+&__image {
+  @extend %image-absolute;
+  object-fit: cover;
+
+}
+}

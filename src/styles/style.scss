@@ -2,18 +2,21 @@
 
 // Core
 @import './core/vars';
-@import './core/inheritance';
 @import './core/mixins';
+@import './core/inheritance';
 @import './core/common';
 
 // Common components
 
-@import './components/burger';
-@import './components/button';
-@import './components/scroll';
-@import './components/link-card';
-@import './components/logo';
-@import './components/navigation';
+@import './components/common/burger';
+@import './components/common/button';
+@import './components/common/scroll';
+@import './components/common/link-card';
+@import './components/common/logo';
+@import './components/common/navigation';
+@import './components/common/photo-grid';
+@import './components/common/blog-card';
+@import './components/common/input';
 
 // Components
 
@@ -21,3 +24,7 @@
 @import './components/section-about';
 @import './components/section-servises';
 @import './components/section-gallery';
+@import './components/section-subscribe';
+@import './components/section-blog';
+@import './components/section-contact';
+@import './components/footer';

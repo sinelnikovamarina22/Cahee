@@ -22,6 +22,13 @@ $blog-btn-color: #f72b3b;
 $text-main-color: #262626;
 $text-marked-color: #ff2b58;
 
+// Input
+$input-bg: rgba(0, 196, 196, 0.5);
+$input-active-bg: #00c4c4;
+$input-active-border: #355b82;
+$input-error-border: #FF2B58;
+$input-valid-border: #96B92C;
+
 @function calcRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
@@ -30,7 +37,8 @@ $text-marked-color: #ff2b58;
 $logo-fs: calcRem(50px);
 
 $H900: calcRem(90px);
-$H800: calcRem(60px);
+$H800: calcRem(70px);
+$H750: calcRem(60px);
 $H700: calcRem(40px);
 $H600: calcRem(32px);
 $H500: calcRem(25px);
@@ -48,7 +56,9 @@ $max-width: 1200px;
 
 $screen-iphone: 375px;
 $screen-iphone-plus: 414px;
-$screen-tablet: 768px;
+$screen-tablet: 600px;
+$screen-tablet-medium: 768px;
+$screen-tablet-large: 900px;
 $screen-desktop: 1024px;
 $screen-desktop-large: 1280px;
 $screen-hd: 1366px;

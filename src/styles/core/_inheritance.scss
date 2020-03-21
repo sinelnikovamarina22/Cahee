@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+%visible-z {
+  position: relative;
+  z-index: 1;
+}
+
 %image-absolute {
   position: absolute;
   top: 0;
@@ -27,4 +32,29 @@
   & * {
     width: 100%;
   }
+}
+%section-title {
+  text-transform: capitalize;
+  @media screen and (min-width: 600px) {
+    font-size: $H900;
+  }
+}
+
+%section-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (min-width: $screen-tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: $screen-desktop) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+%background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

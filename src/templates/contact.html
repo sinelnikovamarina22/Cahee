@@ -1,0 +1,34 @@
+<section class="section-contact">
+    <div class="container">
+      <h2 class="section-contact__title">Contact</h2>
+      <p class="section-contact__text">
+        For new projects, ideas, business or anything you'd like to discuss, contact
+        with me!
+      </p>
+      <div class="section-contact__inner">
+        <ul class="section-contact__list">
+          <li class="section-contact__list-item">
+            <p class="section-contact__label">ADDRESS</p>
+            <p class="section-contact__value">123 City name, Street, City, Country</p>
+          </li>
+          <li class="section-contact__list-item">
+            <p class="section-contact__label">EMAIL</p>
+            <a href='mailto:cahee@domain.com' class="section-contact__value">cahee@domain.com</a>
+          </li>
+          <li class="section-contact__list-item">
+            <p class="section-contact__label">PHONE</p>
+            <a href='tel:+0123456789' class="section-contact__value">+012 345 6789</a>
+          </li>
+        </ul>
+        <div class="section-contact__form-wrapper section-contact__form-wrapper--desktop-left">
+          <form class="section-contact__form" id='form' action='/' method="POST">
+            <input class="section-contact__input input" type="text" placeholder="Your name..." minlength="2" required>
+            <input class="section-contact__input input" type="email" placeholder="Your email..." required>
+            <input class="section-contact__input input" type="tel" placeholder="Your phone number..." minlength="9" required>
+            <textarea class="section-contact__input input input--textarea" placeholder="Your message..." cols="30" rows="10" required></textarea>
+          </form>
+          <button form="form" class="button button--form section-contact__button">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,82 @@
+.section-contact {
+	background-image: url(../images/bg-contact.png);
+	@extend %background-image;
+	padding-top: 50px;
+	padding-bottom: 60px;
+	@include media {
+		padding-top: 101px;
+		padding-bottom: 120px;
+	}
+	&__inner {
+		@include media($screen-tablet-large) {
+			@include flex;
+		}
+	}
+	&__title {
+		@include text($H900,400);
+		margin-bottom: 32px;
+		text-align: center;
+	}
+	&__text {
+		@include text($H200,);
+		max-width: 350px;
+		margin: 0 auto;
+		margin-bottom: 32px;
+		text-align: center;
+		line-height: 1.4;
+	}
+	&__form-wrapper {
+		@include media($screen-tablet-large) {
+			flex: 1 1;
+		}
+		&--desktop-left {
+			@include media($screen-tablet-large) {
+				order: -1;
+				margin-right: 80px;
+			}
+			@include media($screen-fullhd) {
+				margin-right: 170px;
+			}
+		}
+	}
+	&__list {
+		margin-bottom: 46px;
+		@include media($screen-tablet-large) {
+			flex: 1 1;
+		}
+	}
+	&__list-item {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+		@include media($screen-tablet-large) {
+			text-align: left;
+		}
+    }
+    &__label {
+        @include text($H200, 700);
+        margin-bottom: 2px;
+      }
+      &__value {
+        @include text($H300, 300);
+      }
+      &__form {
+        margin-bottom: 24px;
+        @include flex(flex-start, stretch, column);
+        &:valid + * {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      &__input {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+      &__button {
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+      }
+}
