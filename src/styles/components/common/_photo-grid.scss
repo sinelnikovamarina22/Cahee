@@ -50,7 +50,7 @@
   }
 &__image-wrapper {
     position: relative;
-    // background-color: $grey;
+    background-color: $grey;
     width: 242px;
     height: 170px;
     box-shadow: 0 2px 5px 0 (black, 0.5);
@@ -74,7 +74,8 @@
       @include padding-hack(71%, cover);
       margin-bottom: 0;
       &--large {
-        padding-bottom: 46.5%;
+        padding-bottom: 47.6%;
+        
       }
       &--small {
         height: auto;
